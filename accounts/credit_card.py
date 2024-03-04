@@ -31,6 +31,7 @@ class CreditCard(Account):
     Amount is the amount paid - if the amount paid is greater than or equal to the minimum payment 
     it will reduce the balance
     For the exception work out the difference between the minimum amount and amount paid"""
+    # is this an example of polymorphism because this is the deposit method from account but does something different
     def deposit(self, amount):
         if amount >= self.minimum_payment:
             self._balance -= amount
