@@ -21,7 +21,6 @@ class Customer(Person):
     def get_reward_balance(self):
         return f'Thank you for your purchase.\nYour new rewards balance is {self._new_rewards_balance}'
 
-
     # decorate @property - getting the preferences and then changing the value
     @property
     def new_prefs(self):

@@ -6,6 +6,9 @@ from accounts.insufficient_funds_exception import InsufficientFundsException
 # instantiation
 # this is when we create objects based on classes
 try:
+    hello_kitty_account = Account(900, 'Hello', 'Kitty')
+    hello_kitty_account.withdraw(2000)
+    print(hello_kitty_account)
     lisa_account = Account(100, 'Lisa', 'Simpson')
     print(lisa_account)
     print(dir(Account))
@@ -133,7 +136,7 @@ try:
     # print(hello_kitty_account)
 
 except InsufficientFundsException as insuf:
-    print('You have insufficicent funds')
+    print('You have insufficient funds')
     print(f'This would take you {insuf.overdrawn_amount} overdrawn')
 
 finally:

@@ -1,3 +1,4 @@
+from persons.address import Address
 # encapsulated the attributes and behaviour related to the data type employee
 # this is the base or super class
 class Person:
@@ -9,6 +10,7 @@ class Person:
         self.__age = age
         self.__email = email
         self.__telephone = telephone
+        self.__address = Address()
 
     # getting and setting the attributes using the property decorator
     @property
@@ -21,6 +23,7 @@ class Person:
         name_parts = name.split()
         self.first_name = name_parts[0]
         self.last_name = name_parts[1]
+
     @property
     def age(self):
         return self.__age
@@ -28,14 +31,6 @@ class Person:
     @age.setter
     def age(self, age):
         self.__age = age
-
-    @property
-    def address(self):
-        return self.__address
-
-    @address.setter
-    def address(self, address):
-        self.__address = address
 
     @property
     def email(self):

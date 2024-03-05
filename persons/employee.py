@@ -1,7 +1,10 @@
+from persons import address
 from persons.person import Person
 # Importing the base class Person from the package persons, file name person
 # Sub Class or derived class called employee and inheritance from Person in brackets
 # encapsulated the attributes and behaviour related to the data type employee
+
+
 class Employee(Person):
     # public variable
     company_name = None
@@ -59,13 +62,16 @@ class Employee(Person):
             return 'Employed'
         else:
             return "You don't work here"
-    # method to increate employees salary
+
+    # method to create employees salary
     def promotion_salary(self):
         self.__new_wage = self.__wage + 500
         return f'Your new wage is {self.__new_wage}!'
+
     # using the built in function from base class Object - overrides the base class function
     def __str__(self):
         return f"\nEmployee\nFull name: {self.full_name}\nDepartment: {self.department}\nJob: {self.job} \nContract: {self.contract}\n********************"
+
     # class method can be used on the class directly
     # cls refers to the class itself
     # this gets the company name - public variable shared among all objects of the class
@@ -73,7 +79,8 @@ class Employee(Person):
     @classmethod
     def get_company_name(cls):
         return cls.company_name
-    #
+
+
     @classmethod
     def set_company_name(cls, name):
         cls.company_name = name

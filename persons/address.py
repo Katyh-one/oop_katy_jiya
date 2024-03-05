@@ -1,5 +1,4 @@
-# composition - where you have a has a relationship
-# address has a relationship with customer and employee
+# to do look at how could do composition using address - has a relationship with x
 # class created with the attributes of an address
 # overriding the __str__ method to print the address
 class Address:
